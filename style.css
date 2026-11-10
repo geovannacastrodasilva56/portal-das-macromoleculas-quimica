@@ -1,0 +1,464 @@
+.toggle-tema {
+    width: 65px;
+    height: 32px;
+    border-radius: 50px;
+    background-color: darkseagreen;
+    border: 2px solid #245743;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    cursor: pointer;
+}
+
+.icone {
+    font-size: 14px;
+    z-index: 1;
+}
+
+.bolinha {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-color: #245743;
+    border-radius: 50%;
+    left: 3px;
+    transition: 0.3s;
+}
+
+[data-tema="escuro"] .toggle-tema {
+    background-color: #363f4b;
+}
+
+[data-tema="escuro"] .bolinha {
+    left: 34px;
+}
+:root {
+    --fundo: #D1D5D8;
+    --texto: #222222;
+    --cartao: #245743;
+    --destaque: #245743;
+    --texto-destaque: #D1D5D8;
+}
+
+[data-tema="escuro"] {
+    --fundo: #171717;
+    --texto: #ffffff;
+    --cartao: #292929;
+    --destaque: #103325;
+    --texto-destaque: #ffffff;
+}
+
+body {
+    background-color: var(--fundo);
+    color: var(--texto);
+}
+
+.card {
+    background-color: var(--cartao);
+}
+
+header {
+    background-color: var(--destaque);
+    color: var(--texto-destaque);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color: var(--texto-destaque);
+}
+
+#btn-tema {
+    display: block;
+    margin-left: auto;
+}
+
+h1{
+    background-color:var(--destaque);
+    color: #D1D5D8;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.slider{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.slider img{
+    width: 100%;
+    height: 700px;
+}
+
+.slider button{
+    background-color: darkseagreen;
+    color: black;
+    border-radius: 40%;
+    width: 100px;
+    height: 40px;
+    margin: 10px;
+}
+
+
+.busca {
+    text-align: center;
+    margin: 20px;
+}
+
+.busca input {
+    width: 80%;
+    max-width: 500px;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #245743;
+}
+
+.filtros {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px;
+}
+
+.filtros button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #245743;
+    color: white;
+    cursor: pointer;
+}
+
+.filtros button:hover{
+    background-color: darkseagreen;
+    color: black;
+}
+
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.card{
+    width: 100%;
+    max-width: 500px;
+    height: 600px;
+    background: var(--cartao);
+    border-radius: 20px;
+    transition: .3s ease;
+    overflow: hidden;
+}
+
+.card img{
+    width: 100%;
+    height: 300px;
+    transition: .4s ease;
+}
+
+.card:hover img{
+    transform: scale(1.08);
+}
+
+.card a{
+    color: #000;
+    border-radius: 10%;
+}
+
+.conteudo{
+    padding: 20px;
+}
+
+.card{
+    transition: .3s ease;
+}
+
+.card{
+    overflow: hidden;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px #343A40;
+}
+
+.card button{
+    background-color:darkseagreen ;
+    color: white;
+    border-radius: 50px;
+}
+
+.card button:hover{
+    background-color:darkseagreen ;
+    color: black;
+}
+
+.cardCuriosidade{
+    width: 100%;
+    height: 600px;
+    background: #245743;
+    border-radius: 20px;
+    transition: .3s ease;
+    overflow: hidden;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.cardCuriosidade:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px #343A40;
+}
+
+.cardCuriosidade img{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    height: 400px;
+    margin: 20px;
+    width: 550px;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.texto.expandido {
+    display: block;
+}
+
+
+.acidosNucleicos{
+    width: 100%;
+    height: 700px;
+}
+
+.quiz button{
+    width: 150px;
+    height: 50px;
+    background-color: darkseagreen;
+    border-radius: 50px;
+    margin-bottom: 30px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#D1D5D8;
+    background-color: #245743;
+}
+
+@media (min-width:601px) and (max-width: 1024px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    .cardCuriosidade {
+        width: 90%;
+        height: auto;
+        margin: 20px auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .cardCuriosidade img{
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        margin: 0;
+        object-fit: contain;
+    }
+}
+
+@media (max-width: 600px) {
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .card {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .card img{
+        height: auto;
+    }
+
+    .cardCuriosidade {
+        width: 90%;
+        height: auto;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .cardCuriosidade img{
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin: 0;
+        object-fit: contain;
+    }
+}
+
+
+#menu-hamburguer {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    #menu-hamburguer {
+        display: block;
+    }
+
+    #menu {
+        margin-left:auto;
+        gap: 15px;
+    }
+
+    #menu.ativo {
+        display: flex;
+    }
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-conteudo {
+    background-color: var(--fundo);
+    color: var(--texto);
+    padding: 30px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+}
+
+.abrir-modal{
+    width: 110px;
+    height: 50px;
+    background-color: darkseagreen;
+    border-radius: 50px;
+}
+
+.fechar-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.descoberta {
+    text-align: center;
+    padding: 30px;
+    margin: 20px;
+    background-color: var(--cartao);
+    color: var(--texto-destaque);
+    border-radius: 15px;
+}
+
+#descobrir {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: darkseagreen;
+    cursor: pointer;
+}
+
+#resultado-descoberta {
+    margin-top: 20px;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header h1 {
+    animation: aparecer 1s ease;
+}
+
+
+@keyframes surgir {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.card {
+    animation: surgir 0.8s ease;
+}
+
+.imgmacromoleculas{
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.imgmacromoleculas:hover {
+    transform: scale(1.05);
+}
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}

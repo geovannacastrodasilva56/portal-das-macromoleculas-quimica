@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz de Química</title>
+</head>
+<body>
+
+<header>
+    <h1>Quiz de Química</h1>
+    <h4>Teste seus conhecimentos!</h4>
+    <div class="navegação">
+            <div class="links">
+                <a href="index.html">Início</a> | <a href="carboidratos.html">Carboidratos</a> | <a href="polimeros.html">Polímeros</a> | <a href="lipidios.html">Lipídios</a> | <a href="acidos-nucleicos.html">Ácidos Nucleicos</a> | <a href="proteinas.html">Proteínas</a> | <a href="fontes.html">Fontes</a>
+            </div>
+            <button id="btn-tema" class="toggle-tema">
+                <span class="icone">☀️</span>
+                <span class="icone">🌙</span>
+                <span class="bolinha"></span>
+            </button>
+        </div>
+</header>
+
+<nav>
+    <a href="index.html">Início</a> |
+</nav>
+
+<main>
+    <section>
+        <h2>Quiz sobre Química</h2>
+
+        <form id="quiz">
+            <article>
+                <h3>1. Qual é a principal função dos carboidratos?</h3>
+                <input type="radio" name="p1" value="a" required> Armazenar informações genéticas<br>
+                <input type="radio" name="p1" value="b"> Fornecer energia<br>
+                <input type="radio" name="p1" value="c"> Formar anticorpos<br>
+            </article>
+
+            <article>
+                <h3>2. Qual alimento é rico em lipídios?</h3>
+                <input type="radio" name="p2" value="a" required> Azeite de oliva<br>
+                <input type="radio" name="p2" value="b"> Arroz<br>
+                <input type="radio" name="p2" value="c"> Água<br>
+            </article>
+
+            <article>
+                <h3>3. Como são formados os polímeros?</h3>
+                <input type="radio" name="p3" value="a" required> Pela união de monômeros<br>
+                <input type="radio" name="p3" value="b"> Pela união de órgãos<br>
+                <input type="radio" name="p3" value="c"> Pela mistura de vitaminas<br>
+            </article>
+
+            <article>
+                <h3>4. Qual é a unidade básica das proteínas?</h3>
+                <input type="radio" name="p4" value="a" required> Glicose<br>
+                <input type="radio" name="p4" value="b"> Ácido graxo<br>
+                <input type="radio" name="p4" value="c"> Aminoácido<br>
+            </article>
+
+            <article>
+                <h3>5. Qual molécula armazena a informação genética?</h3>
+                <input type="radio" name="p5" value="a" required> DNA<br>
+                <input type="radio" name="p5" value="b"> Amido<br>
+                <input type="radio" name="p5" value="c"> Colesterol<br>
+            </article>
+
+            <br>
+            <button type="submit">Ver resultado</button>
+        </form>
+
+        <p id="resultado"></p>
+    </section>
+</main>
+
+<footer>&copy; feito por Geovana</footer>
+
+<script src="java.js"></script>
+</body>
+</html>
